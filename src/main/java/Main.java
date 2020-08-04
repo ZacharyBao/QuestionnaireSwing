@@ -9,9 +9,9 @@ public class Main {
         questionnaireForm.setLocationRelativeTo(null);//let the app show in the middle of the screen
         questionnaireForm.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         questionnaireForm.setVisible(true);
-        questionnaireForm.addWindowListener(new java.awt.event.WindowAdapter(){
+        questionnaireForm.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
-            public void windowClosing(java.awt.event.WindowEvent windowEvent){
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
                 JOptionPane.showMessageDialog(null, "You can't close the windows until you finish all of the questions!", "Warning", JOptionPane.ERROR_MESSAGE);
             }
         });

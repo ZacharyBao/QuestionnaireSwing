@@ -75,7 +75,7 @@ public class HttpClientHelper {
                 Map.Entry<String, String> elem = (Map.Entry<String, String>) iterator.next();
                 formParams.add(new BasicNameValuePair(elem.getKey(), String.valueOf(elem.getValue())));
             }
-            if(formParams.size()>0) {
+            if (formParams.size() > 0) {
                 UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(formParams, "UTF-8");
                 httpPost.setEntity(formEntity);
             }

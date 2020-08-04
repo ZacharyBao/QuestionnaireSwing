@@ -1,6 +1,5 @@
 import Entities.QuestionEntity;
 import Utils.HttpClientHelper;
-import Utils.ImagePanel;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -69,7 +68,6 @@ public class QuestionnaireForm extends JFrame {
                     String realIndex = "" + (index + 1);
                     selectedOptions.put(realIndex, (String) optionsListMode.getElementAt(index));
                 }
-                //System.out.println(selectedOptions);
             }
         });
 
@@ -144,13 +142,6 @@ public class QuestionnaireForm extends JFrame {
         }
         questionOptions.setModel(listModel);
         //No need to judge whether the question is with single or multiple choice, some code in listener will do the relevant thing
-//        if (allQuestions.get(questionIndexPointer).getQuestionOptionalOptionNum() >= 2) {
-//            questionOptions.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-//            System.out.println("MULTIPLE_INTERVAL_SELECTION");
-//        } else {
-//            questionOptions.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-//            System.out.println("SINGLE_SELECTION");
-//        }
         questionOptions.setBorder(new LineBorder(Color.GRAY));
         windowsHeight += (40 * allQuestions.get(questionIndexPointer).getQuestionOptions().size());
     }
